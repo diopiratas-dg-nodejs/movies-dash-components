@@ -25,18 +25,15 @@ let user = {
 let cardProps = [productInDataBase,amount,user];
 
 
-function ContentRowTop(){
-    return (
-        <React.Fragment>
-        {/*<!-- Content Row -->*/}
+function ContentRowMovies(){
+    return (                
         <div className="row">
             {
                 cardProps.map((producto,index)=>{
                     return <SmallCard  {...producto}  key= {index}/>
                 })
             }      
-        </div>
-        </React.Fragment>
+        </div>        
     )
 }
-export default ContentRowTop;
+export default ContentRowMovies;
