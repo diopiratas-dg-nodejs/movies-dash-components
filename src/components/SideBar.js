@@ -4,6 +4,7 @@ import ContentWrapper from './ContentWrapper';
 import GenresInDb from './GenresInDb';
 import Movie from './Movie';
 import LastMovieInDb from './LastMovieInDb';
+import SearchMovies from './SearchMovies';
 import NotFound from './NotFound';
 import {Link, Route, Routes} from 'react-router-dom'
 
@@ -58,6 +59,14 @@ function SideBar(){
                         <span>Tables</span></Link>
                 </li>
 
+                 {/*<!-- Buscador -->*/}
+                 <li className="nav-item nav-link">
+                    <Link className="nav-link" to="/SearchMovies">
+                        <i className="fas fa-search"></i>
+                        <span>Search a movie</span>
+                    </Link>
+                </li>
+
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
@@ -69,6 +78,7 @@ function SideBar(){
                 <Route path='/GenresInDb' element={<GenresInDb/>}/>                
                 <Route path='/ContentRowMovies' element={<Movie />}/>                
                 <Route path='/LastMovieInDb' element={<LastMovieInDb />}/>  
+                <Route path='/SearchMovies' element={<SearchMovies />} />
                 <Route path='*' element={<NotFound/>} />
             </Routes>
         </React.Fragment>
